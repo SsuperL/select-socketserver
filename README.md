@@ -1,1 +1,4 @@
 # select-socketserver
+使用 Python的select模块实现select版的socketserver
+select主要用于socket通信中，可以监听多个端口，实现多线程socket通信
+select()的机制中提供一fd_set的数据结构，实际上是一long类型的数组， 每一个数组元素都能与一打开的文件句柄（不管是Socket句柄，还是其他文件或命名管道或设备句柄）建立联系，建立联系的工作由程序员完成， 当调用select()时，由内核根据IO状态修改fd_set的内容，由此来通知执行了select()的进程哪一Socket或文件可读或可写。主要用于Socket通信当中。
